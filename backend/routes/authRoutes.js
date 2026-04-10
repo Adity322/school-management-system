@@ -27,7 +27,7 @@ router.post("/register", async (req, res) => {
     await admin.save();
 
     // ✅ CREATE TOKEN HERE
-    const token = Jwt.sign(
+    const token = jwt.sign(
       { id: admin._id },
       process.env.JWT_SECRET,
       { expiresIn: "1d" }
