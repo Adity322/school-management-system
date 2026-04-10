@@ -16,13 +16,15 @@ connectDB();
 
 // Middleware
 app.use(express.json());
+const cors = require("cors");
+
 app.use(cors({
-  origin: "https://school-management-system-khaki-delta.vercel.app",
+  origin: [
+    "http://localhost:3000",
+    "https://school-management-system-git-main-adity322s-projects.vercel.app"
+  ],
   credentials: true
 }));
-
-app.use(cors()); // 🔥 VERY IMPORTANT
-
 // Routes
 app.use("/api/auth", require("./routes/authRoutes"));
 app.use("/api/students", require("./routes/studentRoutes"));
