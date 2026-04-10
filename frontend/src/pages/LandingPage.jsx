@@ -12,10 +12,10 @@ const LandingPage = () => {
         </h1>
 
         <div className="space-x-6 flex items-center">
-          <a href="#" className="text-gray-700 hover:text-blue-600">
+          <a href="/" className="text-gray-700 hover:text-blue-600">
             Home
           </a>
-          <a href="#" className="text-gray-700 hover:text-blue-600">
+          <a href="/" className="text-gray-700 hover:text-blue-600">
             About
           </a>
 
