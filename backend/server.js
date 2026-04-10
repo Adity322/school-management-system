@@ -21,7 +21,7 @@ app.use(cors({
   credentials: true
 }));
 
-app.options("*", cors()); // 🔥 VERY IMPORTANT
+app.use(cors()); // 🔥 VERY IMPORTANT
 
 // Routes
 app.use("/api/auth", require("./routes/authRoutes"));
