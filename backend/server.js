@@ -16,7 +16,12 @@ connectDB();
 
 // Middleware
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: "https://school-management-system-khaki-delta.vercel.app",
+  credentials: true
+}));
+
+app.options("*", cors()); // 🔥 VERY IMPORTANT
 
 // Routes
 app.use("/api/auth", require("./routes/authRoutes"));

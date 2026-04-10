@@ -8,19 +8,16 @@ const Admin = require("../models/Admin");
 // ================= REGISTER =================
 router.post("/register", async (req, res) => {
   try {
-    const { name ,email, password } = req.body;
+    const { name, email, password } = req.body;
 
-    // check if admin already exists
     const existingAdmin = await Admin.findOne({ email });
     if (existingAdmin) {
       return res.status(400).json({ msg: "Admin already exists" });
     }
 
-    // hash password
     const salt = await bcrypt.genSalt(10);
     const hashedPassword = await bcrypt.hash(password, salt);
 
-    // create admin
     const admin = new Admin({
       name,
       email,
@@ -29,12 +26,24 @@ router.post("/register", async (req, res) => {
 
     await admin.save();
 
-    res.json({ msg: "Admin registered successfully" });
+    // ✅ CREATE TOKEN HERE
+    const token = Jwt.sign(
+      { id: admin._id },
+      process.env.JWT_SECRET,
+      { expiresIn: "1d" }
+    );
+
+    // ✅ RETURN TOKEN + NAME
+    res.json({
+      token,
+      name: admin.name,
+    });
+
   } catch (error) {
+    console.log("REGISTER ERROR:", error); // 🔥 IMPORTANT
     res.status(500).json({ msg: "Server error" });
   }
 });
-
 
 // ================= LOGIN =================
 router.post("/login", async (req, res) => {
