@@ -13,7 +13,7 @@ const Login = () => {
   const handleLogin = async () => {
     try {
       const res = await axios.post(
-        "http://localhost:5001/api/auth/login",
+        `${BASE_URL}/api/auth/login`,
         form
       );
 

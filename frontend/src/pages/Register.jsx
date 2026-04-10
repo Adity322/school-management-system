@@ -13,7 +13,7 @@ const Register = () => {
 
   const handleRegister = async () => {
     try {
-      await axios.post("http://localhost:5001/api/auth/register", form);
+      await axios.post(`${BASE_URL}/api/students`, form);
 
       alert("Registered Successfully ✅");
 
