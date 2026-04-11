@@ -144,7 +144,7 @@ npm start
 * Update `BASE_URL` in `api.js`:
 
 ```js
-const BASE_URL = "https://your-backend-url.onrender.com";
+const BASE_URL = "https://school-management-system-zihj.onrender.com";
 ```
 
 ---
@@ -172,17 +172,6 @@ const BASE_URL = "https://your-backend-url.onrender.com";
 * ❌ Mixed content (HTTP/HTTPS) → Use HTTPS backend URL
 * ❌ JWT errors → Ensure token is sent in headers
 * ❌ Data sharing between admins → Fixed using `adminId`
-
----
-
-## 📸 Screenshots
-
-* Login Page
-* Register Page
-* Dashboard
-* Task Management
-
-*(Add screenshots here for better presentation)*
 
 ---
 
