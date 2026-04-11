@@ -1,5 +1,8 @@
 # school-management-system
 # 🎓 School Management System
+LIVE DEMO :https://school-management-system-git-main-adity322s-projects.vercel.app
+
+BACKEND API:https://school-management-system-zihj.onrender.com
 
 A full-stack **MERN (MongoDB, Express, React, Node.js)** application that allows admins to manage students and assign tasks efficiently.
 
