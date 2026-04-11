@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const Student = require("../models/student");
-const auth = require("../middleware/authMiddleware");
+const authMiddleware = require("../middleware/authMiddleware");
 
 // GET all students
 router.get("/", authMiddleware, async (req, res) => {
