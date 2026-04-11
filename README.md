@@ -4,6 +4,9 @@ LIVE DEMO :https://school-management-system-git-main-adity322s-projects.vercel.a
 
 BACKEND API:https://school-management-system-zihj.onrender.com
 
+Demo video link:https://drive.google.com/file/d/1IuQ_7n3ekrx6PC8KBktMZsnmuNna75Dv/view?usp=share_link
+
+
 A full-stack **MERN (MongoDB, Express, React, Node.js)** application that allows admins to manage students and assign tasks efficiently.
 
 ---
